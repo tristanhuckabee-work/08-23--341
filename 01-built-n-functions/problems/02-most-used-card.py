@@ -33,6 +33,6 @@ cards = [
 
 # Write your code here.
 def sort_cards(card_list):
-    pass
+    return [card['company'] for card in sorted(card_list, key=lambda card: card['num_users'], reverse=True)]
 
 print(sort_cards(cards))        # ['Chase', 'Wells Fargo', 'Citi']

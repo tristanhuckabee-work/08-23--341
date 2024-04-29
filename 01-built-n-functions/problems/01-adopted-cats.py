@@ -26,6 +26,9 @@ cat_list = [
 
 # Write your code here.
 def cat_verify(cats):
-    pass
+    same_breed= all([cat['breed'] == cat_list[0]['breed'] for cat in cat_list])
+    adoptable = any([cat['adopted'] for cat in cat_list])
+
+    return (same_breed, adoptable)
 
 print(cat_verify(cat_list))    # False
